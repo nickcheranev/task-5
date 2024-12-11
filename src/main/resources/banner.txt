@@ -1,0 +1,19 @@
+
+${AnsiBackground.YELLOW}      QQQQQQQQQ                          iiii   ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}    QQ:::::::::QQ                       i::::i   ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}  QQ:::::::::::::QQ                      iiii   ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::::QQQ:::::::Q                        ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q::::::O   Q::::::Q uuuuuu    uuuuuu   iiiiiii  zzzzzzzzzzzzzzzzz    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O     Q:::::Q u::::u    u::::u   i:::::i  z:::::::::::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O     Q:::::Q u::::u    u::::u    i::::i  z::::::::::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O     Q:::::Q u::::u    u::::u    i::::i  zzzzzzzz::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O     Q:::::Q u::::u    u::::u    i::::i        z::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O     Q:::::Q u::::u    u::::u    i::::i       z::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::O  QQQQ:::::Q u::::u    u::::u    i::::i      z::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q::::::O Q::::::::Q u:::::uuuu:::::u    i::::i     z::::::z          ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW} Q:::::::QQ::::::::Q u:::::::::::::::uu i::::::i   z::::::zzzzzzzz    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}  QQ::::::::::::::Q   u:::::::::::::::u i::::::i  z::::::::::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}    QQ:::::::::::Q     uu::::::::uu:::u i::::::i z:::::::::::::::z    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}      QQQQQQQQ::::QQ     uuuuuuuu  uuuu iiiiiiii zzzzzzzzzzzzzzzzz    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}              Q:::::Q    ${AnsiBackground.DEFAULT}
+${AnsiBackground.YELLOW}               QQQQQQ    ${AnsiBackground.DEFAULT}
