@@ -12,10 +12,6 @@ import java.util.List;
 @Accessors(chain = true)
 public class Quiz {
     /**
-     * Имя пользователя
-     */
-    private String name;
-    /**
      * Список вопросов
      */
     private List<Question> questions;

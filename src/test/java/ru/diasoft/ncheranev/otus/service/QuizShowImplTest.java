@@ -30,6 +30,8 @@ class QuizShowImplTest {
     private UserInterface userInterface;
     @Mock
     private MessageSource messageSource;
+    @Mock
+    private UserNameRepository userNameRepository;
     @InjectMocks
     private QuizShowImpl tester;
 
@@ -48,12 +50,12 @@ class QuizShowImplTest {
                 .setText("dialog.question")
                 .setAnswers(answers);
         Quiz quiz = new Quiz()
-                .setName("User")
                 .setQuestions(List.of(question));
 
         when(questionFormatter.format(question)).thenReturn("formattedQuestion");
         when(userInterface.getLine()).thenReturn("1");
         when(answerValidator.validate(answers, "1")).thenReturn(true);
+        when(userNameRepository.getUserName()).thenReturn("User");
         when(messageSource.getMessage("dialog.score", new Object[] {1, "User"}, LocaleHolder.getLocale()))
                 .thenReturn("Score: 1");
 
@@ -73,12 +75,12 @@ class QuizShowImplTest {
                 .setText("dialog.question")
                 .setAnswers(answers);
         Quiz quiz = new Quiz()
-                .setName("User")
                 .setQuestions(List.of(question));
 
         when(questionFormatter.format(question)).thenReturn("formattedQuestion");
         when(userInterface.getLine()).thenReturn("1");
         when(answerValidator.validate(answers, "1")).thenReturn(false);
+        when(userNameRepository.getUserName()).thenReturn("User");
         when(messageSource.getMessage("dialog.score", new Object[] {0, "User"}, LocaleHolder.getLocale()))
                 .thenReturn("Score: 0");
 
@@ -98,11 +100,11 @@ class QuizShowImplTest {
                 .setText("dialog.question")
                 .setAnswers(answers);
         var quiz = new Quiz()
-                .setName("User")
                 .setQuestions(List.of(question));
 
         when(questionFormatter.format(question)).thenReturn("formattedQuestion");
         when(userInterface.getLine()).thenReturn("1");
+        when(userNameRepository.getUserName()).thenReturn("User");
         when(answerValidator.validate(answers, "1")).thenThrow(new AnswerValidatorException("Ошибка"));
         when(messageSource.getMessage("dialog.score", new Object[] {0, "User"}, LocaleHolder.getLocale()))
                 .thenReturn("Score: 0");

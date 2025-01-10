@@ -19,6 +19,7 @@ public class QuizShowImpl implements QuizShow {
     private final AnswerValidator answerValidator;
     private final UserInterface userInterface;
     private final MessageSource messageSource;
+    private final UserNameRepository userNameRepository;
 
     @Override
     public void show(Quiz quiz) {
@@ -29,8 +30,8 @@ public class QuizShowImpl implements QuizShow {
                     var userData = userInterface.getLine();
 
                     try {
-                        var right = answerValidator.validate(question.getAnswers(), userData);
-                        if (right) {
+                        var answerStatus = answerValidator.validate(question.getAnswers(), userData);
+                        if (answerStatus) {
                             balls.getAndIncrement();
                         }
                     } catch (AnswerValidatorException e) {
@@ -38,7 +39,7 @@ public class QuizShowImpl implements QuizShow {
                     }
                 });
 
-        var dialogScore = "\n" + messageSource.getMessage("dialog.score", new Object[] {balls.get(), quiz.getName()},
+        var dialogScore = "\n" + messageSource.getMessage("dialog.score", new Object[] {balls.get(), userNameRepository.getUserName()},
                 LocaleHolder.getLocale());
         userInterface.outLine(dialogScore);
     }
