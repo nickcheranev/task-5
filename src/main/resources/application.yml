@@ -1,0 +1,16 @@
+spring:
+  banner:
+    # Файл баннера
+    location: banner.txt
+  output:
+    ansi:
+      # Цветной вывод в консоль
+      enabled: ALWAYS
+
+task:
+  # DAO для загрузки вопросов викторины. Варианты:
+  # bundle - локализованный ресурс
+  # file - CSV файл
+  dao: bundle
+  # Имя файла для task.dao: file
+#  fileName: data.csv
