@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import ru.diasoft.ncheranev.otus.model.Quiz;
 import ru.diasoft.ncheranev.otus.util.LocaleHolder;
 
+import static org.apache.commons.lang3.StringUtils.isBlank;
+
 /**
  * Реализация проигрывателя викторины
  */
@@ -16,18 +18,25 @@ public class QuizRunnerImpl implements QuizRunner {
     private final QuizShow quizShow;
     private final UserInterface userInterface;
     private final MessageSource messageSource;
+    private final UserNameRepository userNameRepository;
 
     @Override
     public void run() {
         var locale = LocaleHolder.getLocale();
-        userInterface.outLine(messageSource.getMessage("dialog.enterYourName", null, locale));
-        var name = userInterface.getName();
+        var savedUserName = userNameRepository.getUserName();
+        String name;
+        if (isBlank(savedUserName)) {
+            userInterface.outLine(messageSource.getMessage("dialog.enterYourName", null, locale));
+            name = userInterface.getName();
+            userNameRepository.setUserName(name);
+        } else {
+            name = savedUserName;
+        }
         userInterface.outLine(messageSource.getMessage("dialog.greetings", new Object[] {name}, locale));
 
         var questions = questionDao.read();
 
         quizShow.show(new Quiz()
-                .setName(name)
                 .setQuestions(questions));
     }
 }

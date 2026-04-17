@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.diasoft.ncheranev.otus</groupId>
-	<artifactId>task-5</artifactId>
+	<artifactId>task-7</artifactId>
 	<version>0.0.1</version>
-	<name>Задание 5</name>
+	<name>Задание 7</name>
 	<description>Курс OTUS Spring Framework</description>
 	<url/>
 	<developers>
@@ -29,6 +29,15 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.shell</groupId>
+			<artifactId>spring-shell-starter</artifactId>
+			<version>3.4.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.opencsv</groupId>

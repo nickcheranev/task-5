@@ -1,4 +1,7 @@
 spring:
+  shell:
+    interactive:
+      enabled: true
   banner:
     # Файл баннера
     location: banner.txt
@@ -14,3 +17,10 @@ task:
   dao: bundle
   # Имя файла для task.dao: file
 #  fileName: data.csv
+
+logging:
+  level:
+    ru:
+      diasoft:
+        ncheranev:
+          otus: info
